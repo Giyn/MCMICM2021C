@@ -2,8 +2,6 @@
 -------------------------------------
 # -*- coding: utf-8 -*-
 # @Time    : 2021/2/5 10:00:54
-# @Author  : Giyn
-# @Email   : giyn.jy@gmail.com
 # @File    : Haversine.py
 # @Software: PyCharm
 -------------------------------------

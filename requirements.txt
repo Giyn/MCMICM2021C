@@ -1,0 +1,9 @@
+sklearn
+pandas
+numpy
+seaborn
+matplotlib
+xlrd
+openpyxl
+opencv-python
+nltk

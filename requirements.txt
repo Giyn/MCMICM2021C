@@ -6,3 +6,4 @@ matplotlib
 xlrd
 openpyxl
 opencv-python
+nltk

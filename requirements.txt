@@ -7,3 +7,7 @@ xlrd
 openpyxl
 opencv-python
 nltk
+vaderSentiment
+wordcloud
+gensim
+summa

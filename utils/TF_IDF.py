@@ -1,28 +1,32 @@
 """
 -------------------------------------
 # -*- coding: utf-8 -*-
-# @Time    : 2021/2/5 19:59:31
+# @Time    : 2021/2/7 17:33:43
 # @File    : TF_IDF.py
 # @Software: PyCharm
 -------------------------------------
 """
 
+import nltk
 import math
 import string
-from collections import Counter
 
-import nltk
 from nltk.corpus import stopwords
+from collections import Counter
 from nltk.stem.porter import *
 
 
 def get_tokens(text: str):
     """
+
     participle
+
     Args:
         text: text
+
     Returns:
         tokens
+
     """
     lower = text.lower()
     remove_punctuation_map = dict((ord(char), None) for char in string.punctuation)
@@ -34,12 +38,16 @@ def get_tokens(text: str):
 
 def stem_tokens(tokens, stemmer):
     """
+
     stemming
+
     Args:
         tokens: tokens
         stemmer: stemmer
+
     Returns:
         stemmed
+
     """
     stemmed = []
     for item in tokens:
@@ -87,12 +95,11 @@ def tf_idf(texts: list):
             tf_idf_dict[word] = round(score, 5)
             # print("\tWord: {}, TF-IDF: {}".format(word, round(score, 5)))
 
-        yield tf_idf_dict
+    return tf_idf_dict
 
 
 if __name__ == "__main__":
     texts = ['Giyn likes guitar.',
              'Helen likes guitar too.',
              'Giyn also likes piano.']
-    for i in tf_idf(texts):
-        print(i)
+    print(tf_idf(texts))

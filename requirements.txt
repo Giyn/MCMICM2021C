@@ -13,7 +13,7 @@ gensim
 summa
 keras
 imutils
-tensorflow
 folium
 torch
 torchvision
+SALib

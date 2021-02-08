@@ -9,6 +9,7 @@
 
 import os
 import json
+import pickle
 import shutil
 import random
 
@@ -130,3 +131,13 @@ for key, value in positive_species_dict.items():
 #     for j in test_samples:
 #         shutil.move('images_data/{}'.format(j),
 #                     'images_data/test_images/{}/{}'.format(species, j))
+
+with open('unverified_images', 'rb') as file:
+    unverified_images_list = pickle.load(file)
+
+for i in unverified_images_list:
+    try:
+        shutil.move('images_data/{}'.format(i),
+                    'images_data/unverified_images/{}'.format(i))
+    except FileNotFoundError:
+        pass

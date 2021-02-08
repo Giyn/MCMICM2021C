@@ -14,10 +14,10 @@ import random
 
 from operator import itemgetter
 
-with open('../data/negative_samples_categorize.txt', 'r') as file:
+with open('../data/categorization/negative_samples_categorize.txt', 'r') as file:
     species_dict = json.loads(file.read().replace('\'', '\"'))
 
-with open('../data/negative_species.txt', 'r') as file:
+with open('../data/categorization/negative_species.txt', 'r') as file:
     species_list = list(map(lambda x: x.strip(), file.readlines()))
 
 species_num_dict = {}
@@ -107,7 +107,7 @@ def split_list(full_list, shuffle=True, ratio=0.8):
 #                         'images_data/test_images/{}/{}'.format(species, j))
 
 # positive样本处理
-with open('../data/positive_samples_categorize.txt', 'r') as file:
+with open('../data/categorization/positive_samples_categorize.txt', 'r') as file:
     positive_species_dict = json.loads(file.read().replace('\'', '\"'))
 
 # print(positive_species_dict)

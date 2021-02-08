@@ -9,10 +9,10 @@
 
 import json
 
-with open('../data/negative_samples_categorize.txt', 'r') as file:
+with open('../data/categorization/negative_samples_categorize.txt', 'r') as file:
     species_dict = json.loads(file.read().replace('\'', '\"'))
 
-with open('../data/negative_species.txt', 'r') as file:
+with open('../data/categorization/negative_species.txt', 'r') as file:
     species_list = list(map(lambda x: x.strip(), file.readlines()))
 
 

@@ -49,7 +49,7 @@ species_images_dict['negative'] = []
 for image, species in species_dict.items():
     species_images_dict[species].append(image)
 
-print(species_images_dict)
+# print(species_images_dict)
 
 """对图片进行文件夹分类以及划分训练集和测试集"""
 
@@ -105,3 +105,28 @@ def split_list(full_list, shuffle=True, ratio=0.8):
 #         for j in test_samples:
 #             shutil.move('images_data/{}'.format(j),
 #                         'images_data/test_images/{}/{}'.format(species, j))
+
+# positive样本处理
+with open('../data/positive_samples_categorize.txt', 'r') as file:
+    positive_species_dict = json.loads(file.read().replace('\'', '\"'))
+
+# print(positive_species_dict)
+
+positive_species_images_dict = {}
+
+for key, value in positive_species_dict.items():
+    positive_species_images_dict[value] = []
+
+for key, value in positive_species_dict.items():
+    positive_species_images_dict[value].append(key)
+
+# print(positive_species_images_dict)
+
+# for species, img_list in positive_species_images_dict.items():
+#     train_samples, test_samples = split_list(img_list)
+#     for i in train_samples:
+#         shutil.move('images_data/{}'.format(i),
+#                     'images_data/train_images/{}/{}'.format(species, i))
+#     for j in test_samples:
+#         shutil.move('images_data/{}'.format(j),
+#                     'images_data/test_images/{}/{}'.format(species, j))

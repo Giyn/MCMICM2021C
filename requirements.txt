@@ -11,3 +11,6 @@ vaderSentiment
 wordcloud
 gensim
 summa
+keras
+imutils
+tensorflow

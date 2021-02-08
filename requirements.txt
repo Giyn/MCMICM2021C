@@ -15,3 +15,5 @@ keras
 imutils
 tensorflow
 folium
+torch
+torchvision
